@@ -1,0 +1,23 @@
+from django.db import models
+from django import forms
+from mapbox_location_field.models import LocationField
+# Create your models here.
+
+class Driver(models.Model):
+    photo = models.ImageField,
+    name = models.CharField(max_length=20),
+    Id = models.IntegerField(max_length=3),
+    tel_no = models.IntegerField(max_length= 11),
+    email = models.EmailField,
+    status = models.BooleanField,
+    location = LocationField()
+
+
+class Passenger(models.Model):
+    photo = models.ImageField,
+    name = models.CharField(max_length=20),
+    username = models.CharField(max_length=10),
+    tel_no = models.IntegerField(max_length= 11),
+    email = models.EmailField,
+    location = LocationField()
+
